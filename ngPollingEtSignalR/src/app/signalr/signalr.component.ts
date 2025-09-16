@@ -43,7 +43,6 @@ export class SignalrComponent implements OnInit {
         .start()
         .then(() => {
             console.log('La connexion est active!');
-            this.hubConnection!.invoke("TaskList");
           })
         .catch(err => console.log('Error while starting connection: ' + err));
   }
