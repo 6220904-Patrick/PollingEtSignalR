@@ -12,7 +12,7 @@ import { MatButtonModule } from '@angular/material/button';
 @Component({
   selector: 'app-signalr',
   standalone: true,
-  imports: [MatCardContent,MatCard,MatFormField,FormsModule,MatLabel,CommonModule,MatInput,MatButtonModule],
+  imports: [MatCardContent,MatCard,MatFormField,FormsModule,MatLabel,CommonModule,MatInput,MatButtonModule,MatCheckbox],
   templateUrl: './signalr.component.html',
   styleUrls: ['./signalr.component.css']
 })
