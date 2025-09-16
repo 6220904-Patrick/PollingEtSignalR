@@ -26,7 +26,7 @@ export class PollingComponent implements OnInit {
   constructor(private http:HttpClient){}
 
   ngOnInit(): void {
-    this.updateTasks();
+//    this.updateTasks();
   }
 
   async complete(id: number) {
@@ -44,7 +44,7 @@ export class PollingComponent implements OnInit {
   async updateTasks() {
     // TODO: Faire une première implémentation simple avec un appel au serveur pour obtenir la liste des tâches
     // TODO: UNE FOIS QUE VOUS AVEZ TESTER AVEC DEUX CLIENTS: Utiliser le polling pour mettre la liste de tasks à jour chaque seconde
-    let listTasks = await lastValueFrom(this.http.get<any>(this.apiUrl+'UselessTasks/GetAll'));
+    this.tasks = await lastValueFrom(this.http.get<any>(this.apiUrl+'UselessTasks/GetAll'));
   
     setTimeout(() => this.updateTasks(), 1000);
   }
